@@ -6,10 +6,11 @@
 </div>
 
 <h2>Ship(s)</h2>
-<% @ships.each do |ship| %>
+<% @pirate.ships.each.with_index(1) do |ship, index| %>
   <div class="ship">
+    <h3><%= index %></h3>
     <p>Name: <%= ship.name %></p>
-    <p>Type: <%= ship.type %></p>
+    <p>Type: <%= ship.category %></p>
     <p>Booty: <%= ship.booty %></p>
   </div>
 <% end %>
